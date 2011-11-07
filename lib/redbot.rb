@@ -1,3 +1,5 @@
+require 'time'
+
 require "redbot/version"
 require "redbot/headers"
 
