@@ -1,16 +1,6 @@
 module Redbot::Headers
 
-  class Age
-
-    attr_accessor :value, :errors
-
-    AGE_NAN = "AGE_NAN"
-
-    AGE_NEGATIVE = "AGE_NEGATIVE"
-
-    SINGLE_HEADER_REPEATED = "SINGLE_HEADER_REPEATED"
-
-    INVALID_DATE_SYNTAX = "INVALID_DATE_SYNTAX"
+  class Age < Base
 
     def self.parse(values)
       new(values)

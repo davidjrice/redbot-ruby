@@ -1,5 +1,6 @@
 module Redbot::Headers
-  class Allow
+
+  class Allow < Base
 
     # rfc "2616", "14.7"
     # name "Allow"
@@ -7,10 +8,6 @@ module Redbot::Headers
     # accept :multiple_values
     # accept :values => ["GET", "HEAD", "POST", "PUT", "DELETE"]
     # required :if => response.code == 405
-
-    UNKNOWN_VALUE = "UNKNOWN_VALUE"
-
-    attr_accessor :value, :errors
 
     def self.parse(*values)
       new(values)

@@ -1,9 +1,5 @@
 module Redbot::Headers
-  class AcceptRanges
-
-    UNKNOWN_RANGE = "UNKNOWN_RANGE"
-
-    attr_accessor :value, :errors
+  class AcceptRanges < Base
 
     def self.parse(values)
       new(values)

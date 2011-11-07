@@ -1,3 +1,4 @@
+require "redbot/headers/base"
 require "redbot/headers/accept_ranges"
 require "redbot/headers/allow"
 require "redbot/headers/age"

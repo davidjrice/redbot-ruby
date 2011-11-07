@@ -1,12 +1,9 @@
 module Redbot::Headers
-  class LastModified
+  class LastModified < Base
     # TODO
     # - parse as a single field value
     # - date syntax validation
     # - ensure date is not future
-    FUTURE_DATE = "FUTURE_DATE"
-
-    attr_accessor :value, :errors
 
     def self.parse(header, values)
       new(header, values)
