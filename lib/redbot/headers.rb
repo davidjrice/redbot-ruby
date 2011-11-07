@@ -124,6 +124,21 @@ module Redbot
     #   Indicates the authentication scheme that should be used to access the requested entity.
     #   WWW-Authenticate: Basic
 
+    ### Other
+    # Keep-Alive
+    # Content-Transfer-Encoding
+    # Mime-Version
+    # soapaction
+    # tcn
+    # x-cache
+    # x-download-options
+    # x-meta-mssmarttagspreventparsing
+    # x-pingback
+    # x-ua-compatible
+    # x-xrds-location
+    # x-xss-protection
+
+    ### Additional Non-Standard HTTP Headers
 
     # X-Frame-Options
     #   Clickjacking protection: "deny" - no rendering within a frame, "sameorigin" - no rendering if origin mismatch	
