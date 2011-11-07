@@ -7,6 +7,7 @@ require "redbot/headers/last_modified"
 module Redbot
 
   module Headers
+    #
     # List extracted from (http://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
     #
     # As defined in the HTTP 1.1 spec (http://www.w3.org/Protocols/rfc2616/rfc2616.html)
