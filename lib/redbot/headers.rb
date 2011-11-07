@@ -11,7 +11,7 @@ module Redbot
     #
     # As defined in the HTTP 1.1 spec (http://www.w3.org/Protocols/rfc2616/rfc2616.html)
     #
-
+    #
     # Accept-Ranges 
     #   What partial content range types this server supports
     #   Accept-Ranges: bytes
@@ -139,7 +139,7 @@ module Redbot
     # x-xss-protection
 
     ### Additional Non-Standard HTTP Headers
-
+    #
     # X-Frame-Options
     #   Clickjacking protection: "deny" - no rendering within a frame, "sameorigin" - no rendering if origin mismatch	
     #   X-Frame-Options: deny
