@@ -22,11 +22,11 @@ module Redbot
     #   Valid actions for a specified resource. To be used for a 405 Method not allowed
     #   Allow: GET, HEAD
     # Cache-Control
-    #   Tells all caching mechanisms from server to client whether they may cache this object. 
+    #   Tells all caching mechanisms from server to client whether they may cache this object.
     #   It is measured in seconds
     #   Cache-Control: max-age=3600
     # Connection
-    #   Options that are desired for the connection[4]
+    #   Options that are desired for the connection
     #   Connection: close
     # Content-Encoding
     #   The type of encoding used on the data. See HTTP compression.
