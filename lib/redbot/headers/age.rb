@@ -6,14 +6,6 @@ module Redbot::Headers
       new(values)
     end
 
-    def errors
-      @errors ||= []
-    end
-
-    def alert(error)
-      errors.push(error)
-    end
-
     def initialize(values)
       if values.kind_of?(Array)
         alert(SINGLE_HEADER_REPEATED)

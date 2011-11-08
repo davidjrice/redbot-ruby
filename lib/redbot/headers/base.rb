@@ -17,6 +17,16 @@ module Redbot::Headers
 
     UNKNOWN_RANGE = "UNKNOWN_RANGE"
 
+    INVALID_CACHE_CONTROL_SYNTAX = "INVALID_CACHE_CONTROL_SYNTAX"
+
+
+    def errors
+      @errors ||= []
+    end
+
+    def alert(error)
+      errors.push(error)
+    end
 
   end
 end

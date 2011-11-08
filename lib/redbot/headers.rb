@@ -2,6 +2,7 @@ require "redbot/headers/base"
 require "redbot/headers/accept_ranges"
 require "redbot/headers/allow"
 require "redbot/headers/age"
+require "redbot/headers/cache_control"
 require "redbot/headers/last_modified"
 
 module Redbot
@@ -11,7 +12,7 @@ module Redbot
     # List extracted from (http://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
     #
     # As defined in the HTTP 1.1 spec (http://www.w3.org/Protocols/rfc2616/rfc2616.html)
-    #
+    # http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html
     #
     # Accept-Ranges 
     #   What partial content range types this server supports
