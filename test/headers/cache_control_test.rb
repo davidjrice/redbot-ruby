@@ -18,7 +18,7 @@ describe Redbot::Headers::CacheControl do
   end
   
   it "quoted" do
-    header = Redbot::Headers::CacheControl.parse('a="b,c", c=d')
+    header = Redbot::Headers::CacheControl.parse('a="b,c"', 'c=d')
     header.value.must_equal [['a', 'b,c'], ['c', 'd']]
     header.errors.must_be_empty
   end
@@ -31,7 +31,7 @@ describe Redbot::Headers::CacheControl do
 
   it "invalid max-age" do
     header = Redbot::Headers::CacheControl.parse('max-age=foo')
-    header.value.must_equal []
+    header.value.must_equal [['max-age', nil]]
     header.errors.must_include(Redbot::Headers::CacheControl::INVALID_CACHE_CONTROL_SYNTAX)
   end
 

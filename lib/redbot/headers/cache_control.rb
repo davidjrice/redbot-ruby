@@ -14,16 +14,18 @@ module Redbot::Headers
         attr, val = directive.split("=")
         # TODO: warn on upper-cased directives?
         attr.downcase!
+        val.gsub!('"', '') if val
         if ['max-age', 's-maxage'].include?(attr)
           begin
-            self.value = Integer(val)
-          rescue ArgumentError => e 
+            val = Integer(val)
+          rescue ArgumentError => e
+            val = nil
             alert(INVALID_CACHE_CONTROL_SYNTAX)
           end
         end
-        directives.push({"attr" => attr, "value" => value})
+        directives.push([attr, val])
       end
-      return directives
+      self.value = directives
     end
 
   end
