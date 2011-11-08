@@ -1,5 +1,6 @@
 module Redbot::Headers
-  class LastModified < Base
+  class LastModified
+    include Base
     # TODO
     # - parse as a single field value
     # - date syntax validation
@@ -9,15 +10,8 @@ module Redbot::Headers
       new(header, values)
     end
 
-    def errors
-      @errors ||= []
-    end
-
-    def alert(error)
-      errors.push(error)
-    end
-
     def initialize(header, values)
+      self.errors = []
       if values.kind_of?(Array)
         alert(SINGLE_HEADER_REPEATED)
         self.value = values.unshift

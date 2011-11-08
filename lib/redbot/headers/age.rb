@@ -1,12 +1,14 @@
 module Redbot::Headers
 
-  class Age < Base
+  class Age
+    include Base
 
     def self.parse(values)
       new(values)
     end
 
     def initialize(values)
+      self.errors = []
       if values.kind_of?(Array)
         alert(SINGLE_HEADER_REPEATED)
         self.value = values.pop

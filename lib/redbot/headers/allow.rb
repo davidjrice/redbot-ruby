@@ -1,6 +1,7 @@
 module Redbot::Headers
 
-  class Allow < Base
+  class Allow
+    include Base
 
     # rfc "2616", "14.7"
     # name "Allow"
@@ -13,15 +14,8 @@ module Redbot::Headers
       new(values)
     end
 
-    def errors
-      @errors ||= []
-    end
-
-    def alert(error)
-      errors.push(error)
-    end
-
     def initialize(values)
+      self.errors = []
       if values.kind_of?(String)
         values = [values]
       end

@@ -1,5 +1,6 @@
 module Redbot::Headers
-  class CacheControl < Base
+  class CacheControl
+    include Base
 
     # @rh.CheckFieldSyntax(syntax.PARAMETER, rh.rfc2616 % "sec-14.9")
     def self.parse(*values)
@@ -7,6 +8,7 @@ module Redbot::Headers
     end
     
     def initialize(values)
+      self.errors = []
       directives = []
       values.each do |directive|
         attr, val = directive.split("=")

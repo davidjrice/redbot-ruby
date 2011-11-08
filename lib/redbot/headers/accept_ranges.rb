@@ -1,19 +1,13 @@
 module Redbot::Headers
-  class AcceptRanges < Base
+  class AcceptRanges
+    include Base
 
     def self.parse(values)
       new(values)
     end
 
-    def errors
-      @errors ||= []
-    end
-
-    def alert(error)
-      errors.push(error)
-    end
-
     def initialize(values)
+      self.errors = []
       if values.kind_of?(String)
         values = [values]
       end
